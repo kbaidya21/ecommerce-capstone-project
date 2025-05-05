@@ -1,4 +1,4 @@
-package com.capstone.ecommerce.e_commerce_project;
+package com.capstone.ecommerce.platform;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

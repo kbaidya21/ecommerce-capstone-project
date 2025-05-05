@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.capstone.ecommerce</groupId>
-	<artifactId>e-commerce-project</artifactId>
+	<artifactId>e-commerce</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>E-commerce Online Shopping</name>
 	<description>E-commerce portal for online shopping</description>

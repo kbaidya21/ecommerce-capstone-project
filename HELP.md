@@ -1,7 +1,7 @@
 # Read Me First
 The following was discovered as part of building this project:
 
-* The original package name 'com.capstone.ecommerce.e-commerce-project' is invalid and this project uses 'com.capstone.ecommerce.e_commerce_project' instead.
+* The original package name 'com.capstone.ecommerce.e-commerce-project' is invalid and this project uses 'com.capstone.ecommerce.platform' instead.
 
 # Getting Started
 

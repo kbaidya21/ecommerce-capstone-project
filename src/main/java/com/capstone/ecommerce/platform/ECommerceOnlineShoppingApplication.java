@@ -1,4 +1,4 @@
-package com.capstone.ecommerce.e_commerce_project;
+package com.capstone.ecommerce.platform;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
