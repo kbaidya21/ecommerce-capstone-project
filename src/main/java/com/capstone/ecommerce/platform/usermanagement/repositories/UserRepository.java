@@ -1,6 +1,6 @@
-package com.capstone.ecommerce.platform.com.capstone.ecommerce.platform.usermanagement.repositories;
+package com.capstone.ecommerce.platform.usermanagement.repositories;
 
-import com.capstone.ecommerce.platform.com.capstone.ecommerce.platform.usermanagement.models.User;
+import com.capstone.ecommerce.platform.usermanagement.models.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

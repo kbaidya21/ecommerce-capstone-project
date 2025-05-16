@@ -1,14 +1,13 @@
-package com.capstone.ecommerce.platform.com.capstone.ecommerce.platform.usermanagement.services;
+package com.capstone.ecommerce.platform.usermanagement.services;
 
-
-import com.capstone.ecommerce.platform.com.capstone.ecommerce.platform.usermanagement.dtos.CreateUserRequestDto;
-import com.capstone.ecommerce.platform.com.capstone.ecommerce.platform.usermanagement.dtos.ResetPasswordRequestDto;
-import com.capstone.ecommerce.platform.com.capstone.ecommerce.platform.usermanagement.dtos.UserDto;
-import com.capstone.ecommerce.platform.com.capstone.ecommerce.platform.usermanagement.dtos.UserUpdateRequestDto;
-import com.capstone.ecommerce.platform.com.capstone.ecommerce.platform.usermanagement.exceptions.UserExistException;
-import com.capstone.ecommerce.platform.com.capstone.ecommerce.platform.usermanagement.models.User;
-import com.capstone.ecommerce.platform.com.capstone.ecommerce.platform.usermanagement.repositories.UserRepository;
 import com.capstone.ecommerce.platform.common.exceptions.ResourceNotFoundException;
+import com.capstone.ecommerce.platform.usermanagement.dtos.CreateUserRequestDto;
+import com.capstone.ecommerce.platform.usermanagement.dtos.ResetPasswordRequestDto;
+import com.capstone.ecommerce.platform.usermanagement.dtos.UserDto;
+import com.capstone.ecommerce.platform.usermanagement.dtos.UserUpdateRequestDto;
+import com.capstone.ecommerce.platform.usermanagement.exceptions.UserExistException;
+import com.capstone.ecommerce.platform.usermanagement.models.User;
+import com.capstone.ecommerce.platform.usermanagement.repositories.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.hibernate.Hibernate;
 import org.modelmapper.ModelMapper;
@@ -48,8 +47,9 @@ public class UserServiceImpl implements IUserService {
                 .orElseThrow(() -> new UserExistException("Oops! " + request.getEmail() + " already exists"));
     }
 
+
     @Override
-    public User updateUser(CreateUserRequestDto request, Long userId) {
+    public User updateUser(UserUpdateRequestDto request, Long userId) {
         return userRepository.findById(userId)
                 .map(user -> {
                     user.setFirstName(request.getFirstName());
@@ -70,13 +70,14 @@ public class UserServiceImpl implements IUserService {
 
     @Override
     public UserDto convertUserToDto(User user) {
+
         Hibernate.initialize(user.getRoles());
         return modelMapper.map(user, UserDto.class);
     }
 
     @Override
     public User getAuthenticatedUser() {
-        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        Authentication authentication  = SecurityContextHolder.getContext().getAuthentication();
         String email = authentication.getName();
         return userRepository.findByEmail(email).orElseThrow(() -> new ResourceNotFoundException("User not found"));
     }

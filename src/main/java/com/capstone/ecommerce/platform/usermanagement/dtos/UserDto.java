@@ -1,8 +1,6 @@
-package com.capstone.ecommerce.platform.com.capstone.ecommerce.platform.usermanagement.dtos;
+package com.capstone.ecommerce.platform.usermanagement.dtos;
 
 import lombok.Data;
-
-import java.util.List;
 
 @Data
 public class UserDto {

@@ -1,4 +1,4 @@
-package com.capstone.ecommerce.platform.com.capstone.ecommerce.platform.usermanagement.models;
+package com.capstone.ecommerce.platform.usermanagement.models;
 
 import com.capstone.ecommerce.platform.common.model.BaseModel;
 import jakarta.persistence.Entity;
