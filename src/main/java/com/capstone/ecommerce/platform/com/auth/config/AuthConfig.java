@@ -72,4 +72,5 @@ public class AuthConfig {
         http.addFilterBefore(authTokenFilter(), UsernamePasswordAuthenticationFilter.class);
         return http.build();
     }
+    
 }
